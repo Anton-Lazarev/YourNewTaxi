@@ -1,7 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourNewTaxi.Domain", "YourNewTaxi.Domain\YourNewTaxi.Domain.csproj", "{BABE996D-06A8-437D-AAFA-70A7378FCB71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourNewTaxi.WebUI", "YourNewTaxi.WebUI\YourNewTaxi.WebUI.csproj", "{5D5A411D-685F-40C1-A092-A66EADECF0C2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BABE996D-06A8-437D-AAFA-70A7378FCB71} = {BABE996D-06A8-437D-AAFA-70A7378FCB71}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourNewTaxi.Tests", "YourNewTaxi.Tests\YourNewTaxi.Tests.csproj", "{A53EB0AB-F4EE-49BC-A727-31401AB4DB59}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BABE996D-06A8-437D-AAFA-70A7378FCB71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BABE996D-06A8-437D-AAFA-70A7378FCB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BABE996D-06A8-437D-AAFA-70A7378FCB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BABE996D-06A8-437D-AAFA-70A7378FCB71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5A411D-685F-40C1-A092-A66EADECF0C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5A411D-685F-40C1-A092-A66EADECF0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5A411D-685F-40C1-A092-A66EADECF0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5A411D-685F-40C1-A092-A66EADECF0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53EB0AB-F4EE-49BC-A727-31401AB4DB59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53EB0AB-F4EE-49BC-A727-31401AB4DB59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53EB0AB-F4EE-49BC-A727-31401AB4DB59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53EB0AB-F4EE-49BC-A727-31401AB4DB59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
