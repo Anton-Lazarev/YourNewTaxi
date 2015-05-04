@@ -4,7 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Moq;
 using Ninject;
+using YourNewTaxi.Domain.Entities;
+using YourNewTaxi.Domain.Abstract;
 
 namespace YourNewTaxi.WebUI.Infrastructure
 {
@@ -31,6 +34,14 @@ namespace YourNewTaxi.WebUI.Infrastructure
         private void AddBindings()
         {
             // конфигурирование контейнера
+            Mock<IOrderRepository> mock = new Mock<IOrderRepository>();
+            mock.Setup(m => m.Orders).Returns(new List<Order>
+            {
+                new Order { FIO = "DemoName1", Price = 100 },
+                new Order { FIO = "DemoName2", Price = 200 }
+            }.AsQueryable());
+
+            ninjectKernel.Bind<IOrderRepository>().ToConstant(mock.Object);
         }
     }
 }

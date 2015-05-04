@@ -9,7 +9,6 @@ namespace YourNewTaxi.Domain.Entities
     public class Order
     {
         public int OrderID { get; set; }
-
         public string AddressFinish { get; set; }
         public string AddressStart { get; set; }
         public string Date { get; set; }

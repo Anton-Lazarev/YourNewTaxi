@@ -1,0 +1,21 @@
+﻿@model IEnumerable<YourNewTaxi.Domain.Entities.Order>
+
+@{
+    ViewBag.Title = "YourNewTaxi Orders";
+}
+
+<h3>ShowAllOrders</h3>
+
+@foreach (var p in Model)
+{
+    <div class="item">
+        <h3>@p.FIO</h3>
+        @p.Date
+        @p.Time
+        @p.AddressStart
+        @p.AddressFinish
+        @p.Status
+        @p.ExecutorID
+        <h4>@p.Price.ToString("c")</h4>
+    </div>
+}
