@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourNewTaxi.WebUI", "YourNe
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YourNewTaxi.Tests", "YourNewTaxi.Tests\YourNewTaxi.Tests.csproj", "{A53EB0AB-F4EE-49BC-A727-31401AB4DB59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D5A411D-685F-40C1-A092-A66EADECF0C2} = {5D5A411D-685F-40C1-A092-A66EADECF0C2}
+		{BABE996D-06A8-437D-AAFA-70A7378FCB71} = {BABE996D-06A8-437D-AAFA-70A7378FCB71}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
