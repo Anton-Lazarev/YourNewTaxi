@@ -1,0 +1,23 @@
+﻿@model YourNewTaxi.Models.Order
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success</title>
+</head>
+<body>
+    <div>
+     Your order are accepted: <br />
+        Your start address is @Model.AddressStart <br />
+        Your start address is @Model.AddressFinish <br / >
+
+        @Html.ActionLink("Return back", "Index")
+    </div>
+</body>
+</html>
