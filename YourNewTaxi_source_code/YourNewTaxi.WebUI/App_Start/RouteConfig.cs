@@ -18,8 +18,8 @@ namespace YourNewTaxi.WebUI
                 url: "{controller}/{action}/{id}",
                 defaults: new 
                 { 
-                    controller = "Manager",
-                    action = "ShowAllOrders", 
+                    controller = "Client",
+                    action = "Index", 
                     id = UrlParameter.Optional 
                 }
             );
