@@ -1,0 +1,29 @@
+﻿@model YourNewTaxi.WebUI.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+
+<h1>Log In</h1>
+<p>Please log in to access the driver area</p>
+        
+@using (Html.BeginForm())
+{
+  @Html.ValidationSummary(true)
+  @Html.EditorForModel()
+  <p><input type="submit" value="Log in" /></p>
+}
+
+    </div>
+</body>
+</html>

@@ -8,6 +8,8 @@ using Moq;
 using Ninject;
 using YourNewTaxi.Domain.Entities;
 using YourNewTaxi.Domain.Abstract;
+using YourNewTaxi.WebUI.Infrastructure.Abstract;
+using YourNewTaxi.WebUI.Infrastructure.Concrete;
 
 namespace YourNewTaxi.WebUI.Infrastructure
 {
@@ -42,6 +44,9 @@ namespace YourNewTaxi.WebUI.Infrastructure
             }.AsQueryable());
 
             ninjectKernel.Bind<IOrderRepository>().ToConstant(mock.Object);
+
+            //Добавляем привязку Ninject для провайдера аутентификации
+            ninjectKernel.Bind<IAuthenticate>().To<IAuthenticateImplementation>();
         }
     }
 }

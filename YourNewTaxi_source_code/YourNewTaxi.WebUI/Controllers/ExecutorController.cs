@@ -8,11 +8,11 @@ using YourNewTaxi.Domain.Entities;
 
 namespace YourNewTaxi.WebUI.Controllers
 {
+    [Authorize]
     public class ExecutorController : Controller
     {
         //
         // GET: /Executor/
-
         public ActionResult Index()
         {
             return View();

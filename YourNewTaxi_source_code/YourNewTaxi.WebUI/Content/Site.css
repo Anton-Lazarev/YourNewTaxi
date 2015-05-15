@@ -2,7 +2,7 @@
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: #232323;
-    background-color: #fff;
+    background-color: #fee;
 }
 
 header, footer, nav, section {
@@ -21,6 +21,7 @@ fieldset {
 legend {
     font-size: 1.2em;
     font-weight: bold;
+    font-size: inherit;
 }
 
 textarea {

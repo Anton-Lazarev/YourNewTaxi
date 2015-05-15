@@ -1,0 +1,27 @@
+﻿@model YourNewTaxi.Domain.Entities.Order
+
+@{
+    Layout = null;
+}
+
+<h2>EditOrder</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>Order taxi</title>
+</head>
+<body>
+Fill form ro order taxi:
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+    <p>Start address: @Html.TextBoxFor(x => x.AddressStart)</p>
+    <p>Finish address: @Html.TextBoxFor(x => x.AddressFinish)</p>
+    <p>Your telephone number. Russian telephone format: @Html.TextBoxFor(x => x.ClientPhone)</p>
+    <p>Data of order. Format YYYY-MM-DD (optionally): @Html.TextBoxFor(x => x.Date)</p>
+    <p>Time of order. Format HH:MM (optionally): @Html.TextBoxFor(x => x.Time)</p>
+    <input type="submit" value="Place order">
+    }
+</body>
+</html>
